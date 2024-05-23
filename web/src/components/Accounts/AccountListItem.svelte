@@ -20,7 +20,7 @@
 
 <section class="account" on:click={()=>handleAccountClick(account.id)}>
     <h4>
-        {account.type}{$translations.account}/ {account.id}
+        {$translations.account} {account.type} / {account.id}
     </h4>
     <h5>
         {account.type}{$translations.account}<br />

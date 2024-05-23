@@ -7,9 +7,9 @@
     $: account = $accounts.find((accountItem: any) => $activeAccount === accountItem.id);
 
     function handleClickExportData() {
-        if (account == null) console.log("No account selected");
+        if (account == null) console.log("Nie wybrano konta!");
         if (account.transactions.length === 0) {
-            notify.set("No transactions to export!");
+            notify.set("Brak transakcji do wyexportowania!");
             setTimeout(() => {
                 notify.set("");
             }, 3500);
@@ -17,7 +17,7 @@
         }
         const csv = convertToCSV(account.transactions);
         setClipboard(csv);
-        notify.set("Data copied to clipboard!");
+        notify.set("Skopiowane dane!");
         setTimeout(() => {
             notify.set("");
         }, 3500);
