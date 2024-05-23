@@ -1,25 +1,25 @@
-RegisterNetEvent("life-banking:client:accountManagmentMenu", function()
-    lib.registerContext({
-        id = 'renewed_banking_account_management',
-        title = locale("bank_name"),
-        position = 'top-right',
-        options = {
-            {
-                title = locale("create_account"),
-                icon = 'file-invoice-dollar',
-                metadata = {locale("create_account_txt")},
-                event = "life-banking:client:createAccountMenu"
-            },
-            {
-                title = locale("manage_account"),
-                icon = 'users-gear',
-                metadata = {locale("manage_account_txt")},
-                event = 'life-banking:client:viewAccountsMenu'
-            }
-        }
-    })
-    lib.showContext("renewed_banking_account_management")
-end)
+-- RegisterNetEvent("life-banking:client:accountManagmentMenu", function()
+--     lib.registerContext({
+--         id = 'renewed_banking_account_management',
+--         title = locale("bank_name"),
+--         position = 'top-right',
+--         options = {
+--             {
+--                 title = locale("create_account"),
+--                 icon = 'file-invoice-dollar',
+--                 metadata = {locale("create_account_txt")},
+--                 event = "life-banking:client:createAccountMenu"
+--             },
+--             {
+--                 title = locale("manage_account"),
+--                 icon = 'users-gear',
+--                 metadata = {locale("manage_account_txt")},
+--                 event = 'life-banking:client:viewAccountsMenu'
+--             }
+--         }
+--     })
+--     lib.showContext("renewed_banking_account_management")
+-- end)
 
 RegisterNetEvent("life-banking:client:createAccountMenu", function()
     local input = lib.inputDialog(locale("bank_name"), {{

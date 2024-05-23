@@ -34,14 +34,14 @@
         max-height: 25rem;
         width: 100%;
         height: 100%;
-        background-color: var(--clr-primary);
+        background-color: black;
+        border: 2px solid #b21e4b;
         padding: 5rem;
         border-radius: 1rem;
-
     }
 
     .loading-spinner {
-        color: official;
+        color: white;
         display: inline-block;
         position: relative;
         width: 80px;
