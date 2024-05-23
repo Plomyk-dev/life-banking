@@ -23,7 +23,7 @@
         {$translations.account} {account.type} / {account.id}
     </h4>
     <h5>
-        {account.type}{$translations.account}<br />
+        {$translations.account} {account.type}<br />
         <span>{account.name}</span>
     </h5>
 
