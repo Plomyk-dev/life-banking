@@ -32,7 +32,7 @@ local function openBankUI(isAtm)
     end)
 end
 
-RegisterNetEvent('Renewed-Banking:client:openBankUI', function(data)
+RegisterNetEvent('life-banking:client:openBankUI', function(data)
     local txt = data.atm and locale('open_atm') or locale('open_bank')
     TaskStartScenarioInPlace(PlayerPed, 'PROP_HUMAN_ATM', 0, true)
     if progressBar({
@@ -70,13 +70,13 @@ local bankActions = {'deposit', 'withdraw', 'transfer'}
 CreateThread(function ()
     for k=1, #bankActions do
         RegisterNUICallback(bankActions[k], function(data, cb)
-            local newTransaction = lib.callback.await('Renewed-Banking:server:'..bankActions[k], false, data)
+            local newTransaction = lib.callback.await('life-banking:server:'..bankActions[k], false, data)
             cb(newTransaction)
         end)
     end
     exports.ox_target:addModel(Config.atms, {{
         name = 'renewed_banking_openui',
-        event = 'Renewed-Banking:client:openBankUI',
+        event = 'life-banking:client:openBankUI',
         icon = 'fas fa-money-check',
         label = locale('view_bank'),
         atm = true,
@@ -119,7 +119,7 @@ function CreatePeds()
 
     local targetOpts ={{
         name = 'renewed_banking_openui',
-        event = 'Renewed-Banking:client:openBankUI',
+        event = 'life-banking:client:openBankUI',
         icon = 'fas fa-money-check',
         label = locale('view_bank'),
         atm = false,
@@ -130,7 +130,7 @@ function CreatePeds()
     exports.ox_target:addLocalEntity(peds.basic, targetOpts)
     targetOpts[#targetOpts+1]={
         name = 'renewed_banking_accountmng',
-        event = 'Renewed-Banking:client:accountManagmentMenu',
+        event = 'life-banking:client:accountManagmentMenu',
         icon = 'fas fa-money-check',
         label = locale('manage_bank'),
         atm = false,
@@ -164,7 +164,7 @@ AddEventHandler('onResourceStop', function(resource)
     DeletePeds()
 end)
 
-RegisterNetEvent('Renewed-Banking:client:sendNotification', function(msg)
+RegisterNetEvent('life-banking:client:sendNotification', function(msg)
     if not msg then return end
     SendNUIMessage({
         action = 'notify',
@@ -172,6 +172,6 @@ RegisterNetEvent('Renewed-Banking:client:sendNotification', function(msg)
     })
 end)
 
-RegisterNetEvent('Renewed-Banking:client:viewAccountsMenu', function()
-    TriggerServerEvent('Renewed-Banking:server:getPlayerAccounts')
+RegisterNetEvent('life-banking:client:viewAccountsMenu', function()
+    TriggerServerEvent('life-banking:server:getPlayerAccounts')
 end)

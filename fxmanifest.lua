@@ -1,10 +1,6 @@
 fx_version 'cerulean'
 game 'gta5'
 
-description 'Renewed Banking'
-Author "uShifty#1733"
-version '2.0.0'
-
 lua54 'yes'
 
 shared_scripts {
@@ -32,5 +28,4 @@ files {
   'locales/*.json'
 }
 
-provide 'qb-management'
-provide 'esx_society'
+provide 'Renewed-Banking'

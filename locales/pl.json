@@ -73,7 +73,7 @@
 	"open_bank": "Otwarcie banku",
 	"open_atm": "Otwarcie bankomatu",
 	"canceled": "Odwołany...",
-	"ui_not_built": "Nie można załadować interfejsu użytkownika. Zbuduj Renewed-Banking lub pobierz najnowszą wersję.\n   ^https://github.com/Renewed-Scripts/Renewed-Banking/releases/latest/download/Renewed-Banking.zip^0\n    Jeśli używasz niestandardowej kompilacji interfejsu użytkownika, upewnij się, że nazwa zasobu to Renewed-Banking (nie możesz zmieniać nazwy zasobu).",
+	"ui_not_built": "Nie można załadować interfejsu użytkownika. Zbuduj life-banking lub pobierz najnowszą wersję.\n   ^https://github.com/Renewed-Scripts/life-banking/releases/latest/download/life-banking.zip^0\n    Jeśli używasz niestandardowej kompilacji interfejsu użytkownika, upewnij się, że nazwa zasobu to life-banking (nie możesz zmieniać nazwy zasobu).",
 	"cmd_plyr_id": "Identyfikator serwera docelowego gracza",
 	"cmd_amount": "Ilość pieniędzy do oddania",
 	"delete_account": "Usuń konto",
