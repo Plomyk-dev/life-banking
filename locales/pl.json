@@ -75,7 +75,7 @@
 	"canceled": "Anulowano..",
 	"ui_not_built": "Nie można załadować interfejsu użytkownika. Zbuduj life-banking lub pobierz najnowszą wersję.\n   ^https://github.com/Renewed-Scripts/life-banking/releases/latest/download/life-banking.zip^0\n    Jeśli używasz niestandardowej kompilacji interfejsu użytkownika, upewnij się, że nazwa zasobu to life-banking (nie możesz zmieniać nazwy zasobu).",
 	"cmd_plyr_id": "Identyfikator serwera docelowego gracza",
-	"cmd_amount": "Ilość pieniędzy do oddania",
+	"cmd_amount": "Ilość pieniędzy do przekazania",
 	"delete_account": "Usuń konto",
 	"delete_account_txt": "Usuń utworzone konto",
 	"err_trans_account": "${renewed_banking} Podano nieprawidłowy identyfikator konta do obsługi transakcji! Konta=%s",
